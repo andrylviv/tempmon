@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 //trrgt
 
-//@Controller//gsgr
+@Controller//gsgr
 public class GraphController {
     @Autowired
     AvrTransferWin tem;
