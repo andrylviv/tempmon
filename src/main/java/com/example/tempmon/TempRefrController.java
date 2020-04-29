@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.Map;
 
 
-//@Controller//
+@Controller//
 public class TempRefrController {
     @Autowired
     AvrTransferWin tem;
 
 
-   // @RequestMapping("/reft")
+    @RequestMapping("/reft")
     public String home(Map<String, Object> model) throws Exception {
         tem.opendiv();
         tem.proxyread();
