@@ -59,7 +59,7 @@ public class AvrTransferWin
             n.setDateTime(dateTime);
             n.setTemperature(res);
             userRepository.save(n);
-            Thread.sleep(1000);
+            Thread.sleep(5000);
         }
     }
 
