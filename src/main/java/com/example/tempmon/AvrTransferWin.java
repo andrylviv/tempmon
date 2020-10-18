@@ -41,16 +41,23 @@ public class AvrTransferWin
     private UserRepository userRepository;
     ZoneId zoneId= ZoneId.of("America/Montreal");
     //ZoneId zoneId= ZoneId.systemDefault();
+    static {
+        try {
+            opendiv();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     /**
      * Reads some data from the device.
      *
-     * @param handle
+     * @param //handle
      *            The device handle.
      * @return The read data.
      */
     @Async
     public void proxyread()throws InterruptedException{
-        for (;;) {
+      //  for (;;) {                                                      loop asynk
             read();
             //if (model != null) model.addAttribute("temperature", res);
             LocalDateTime dateTime = LocalDateTime.now();
@@ -60,7 +67,7 @@ public class AvrTransferWin
             n.setTemperature(res);
             userRepository.save(n);
             Thread.sleep(5000);
-        }
+     //   }
     }
 
 
@@ -118,8 +125,8 @@ public class AvrTransferWin
      * @throws Exception
      *             When something goes wrong.
      */
-    DeviceHandle handle;
-    public  void opendiv() throws Exception {
+    static DeviceHandle handle;
+    public static void opendiv() throws Exception {
         // Initialize the libusb context
         int result = LibUsb.init(null);
         if (result != LibUsb.SUCCESS) {
@@ -154,6 +161,8 @@ public class AvrTransferWin
         // Deinitialize the libusb context
         LibUsb.exit(null);
     }
-
+    double getRes(){
+        return res;
+    }
 
 }

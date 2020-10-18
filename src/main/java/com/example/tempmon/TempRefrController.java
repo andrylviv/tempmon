@@ -11,15 +11,15 @@ import java.util.Map;
 
 @Controller//
 public class TempRefrController {
-    @Autowired
+   /* @Autowired
     AvrTransferWin tem;
-
+*/
 
     @RequestMapping("/reft")
     public String home(Map<String, Object> model) throws Exception {
-        tem.opendiv();
+      /*  tem.opendiv();
         tem.proxyread();
-        model.put("temperature", tem.res);
+        model.put("temperature", tem.res);*/
         return "graph";
     }
 }
