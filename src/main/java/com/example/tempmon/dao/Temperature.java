@@ -1,4 +1,4 @@
-package com.example.tempmon;
+package com.example.tempmon.dao;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
