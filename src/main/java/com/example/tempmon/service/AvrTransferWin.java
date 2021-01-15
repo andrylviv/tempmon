@@ -98,18 +98,21 @@ public class AvrTransferWin
                 data[i] = buffer.get();
             }
             //debug("Data received from device: "+YubikeyUtil.toHexString(data));
-            byte r = data[1];
-            byte mask_b1 = 0b00000001;
-            byte mask_b2 = 0b00000010;
-            byte mask_b3 = 0b00000100;
-            byte mask_b4 = 0b00001000;
-            int bit0 = r & mask_b1;
-            int bit1 = (r & mask_b2) >> 1;
-            int bit2 = (r & mask_b3) >> 2;
-            int bit3 = (r & mask_b4) >> 3;
-            double di = bit0 * (Math.pow(2, -4)) + bit1 * (Math.pow(2, -3)) + bit2 * (Math.pow(2, -2)) + bit3 * (Math.pow(2, -1));
-            double ro = data[0];
-            res = di + ro;
+        byte r = (byte)(0x0f&data[1]);
+        byte mask_b1=0b00000001;
+        byte mask_b2=0b00000010;
+        byte mask_b3=0b00000100;
+        byte mask_b4=0b00001000;
+        int bit0= r&mask_b1;
+        int bit1= (r&mask_b2)>>1;
+        int bit2= (r&mask_b3)>>2;
+        int bit3= (r&mask_b4)>>3;
+        double dil = bit0*(Math.pow(2, -4))+bit1*(Math.pow(2, -3))+bit2*(Math.pow(2, -2))+bit3*(Math.pow(2, -1));
+        byte tothb = (byte)(data[0]<<4);
+        byte totlb = (byte)(data[1]>>4&0x0f);
+        double tot = tothb|totlb;
+
+        res = dil+tot;
             System.out.println("t=" + res + "C" + "\u00B0");
 
             //if (model != null) model.addAttribute("temperature", res);
