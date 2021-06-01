@@ -49,7 +49,7 @@ public class AvrTransferWin
         }
     }
 
-    @Async
+  //  @Async
     public void proxyread()throws InterruptedException{
       //  for (;;) {                                                      loop asynk
             read();
@@ -60,7 +60,7 @@ public class AvrTransferWin
             n.setDateTime(dateTime);
             n.setTemperature(res);
             userRepository.save(n);
-            Thread.sleep(5000);
+      //      Thread.sleep(5000);
      //   }
     }
     /**
