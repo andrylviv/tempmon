@@ -70,10 +70,8 @@ public class AvrTransferWin
      *            The device handle.
      * @return The read data.
      */
-    public void read()
-    {
+    public void read() {
       //  for (;;)
-
             ByteBuffer buffer = ByteBuffer.allocateDirect(GET_BYTE);
             buffer.rewind();
             int result=0;
