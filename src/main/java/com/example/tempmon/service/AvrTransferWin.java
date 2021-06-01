@@ -48,13 +48,7 @@ public class AvrTransferWin
             e.printStackTrace();
         }
     }
-    /**
-     * Reads some data from the device.
-     *
-     * @param //handle
-     *            The device handle.
-     * @return The read data.
-     */
+
     @Async
     public void proxyread()throws InterruptedException{
       //  for (;;) {                                                      loop asynk
@@ -69,8 +63,13 @@ public class AvrTransferWin
             Thread.sleep(5000);
      //   }
     }
-
-
+    /**
+     * Reads some data from the device.
+     *
+     * @param //handle
+     *            The device handle.
+     * @return The read data.
+     */
     public void read()
     {
       //  for (;;)
@@ -120,14 +119,7 @@ public class AvrTransferWin
            // return res;
       //  }
     }
-    /**
-     * Main method.
-     *
-     * @param args
-     *            Command-line arguments (Ignored)
-     * @throws Exception
-     *             When something goes wrong.
-     */
+
     static DeviceHandle handle;
     public static void opendiv() throws Exception {
         // Initialize the libusb context
@@ -154,7 +146,6 @@ public class AvrTransferWin
         if (result != LibUsb.SUCCESS) {
             throw new LibUsbException("Unable to claim interface", result);
         }
-
     }
    // read(handle);
     public void closediv(){
