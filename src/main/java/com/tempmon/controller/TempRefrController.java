@@ -1,4 +1,4 @@
-package com.example.tempmon.controller;
+package com.tempmon.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

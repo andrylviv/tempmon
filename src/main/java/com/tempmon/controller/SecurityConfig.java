@@ -1,4 +1,4 @@
-package com.example.tempmon.controller;
+package com.tempmon.controller;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

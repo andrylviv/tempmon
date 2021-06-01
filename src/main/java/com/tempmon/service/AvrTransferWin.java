@@ -1,19 +1,18 @@
-package com.example.tempmon.service;
+package com.tempmon.service;
 
 import java.nio.ByteBuffer;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
-import com.example.tempmon.dao.Temperature;
-import com.example.tempmon.dao.UserRepository;
+import com.tempmon.dao.Temperature;
+import com.tempmon.dao.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.usb4java.DeviceHandle;
 import org.usb4java.LibUsb;
 import org.usb4java.LibUsbException;
 import org.springframework.stereotype.Component;
-import org.springframework.scheduling.annotation.Async;
 
 @Service
 @Component

@@ -1,4 +1,4 @@
-package com.example.tempmon.dao;
+package com.tempmon.dao;
 
 public class Temperatureconf {
   //  int id;

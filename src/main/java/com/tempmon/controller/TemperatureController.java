@@ -1,8 +1,8 @@
-package com.example.tempmon.controller;
+package com.tempmon.controller;
 
 
-import com.example.tempmon.service.AvrTransferWin;
-import com.example.tempmon.dao.Temperatureconf;
+import com.tempmon.service.AvrTransferWin;
+import com.tempmon.dao.Temperatureconf;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

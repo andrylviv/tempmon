@@ -1,7 +1,7 @@
-package com.example.tempmon.controller;
+package com.tempmon.controller;
 
-import com.example.tempmon.dao.Temperature;
-import com.example.tempmon.dao.UserRepository;
+import com.tempmon.dao.Temperature;
+import com.tempmon.dao.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
