@@ -15,7 +15,7 @@ public class TempRefrController {
     AvrTransferWin tem;
 */
 
-    @RequestMapping("/reft")
+    @RequestMapping("/tempmon")
     public String home(Map<String, Object> model) throws Exception {
       /*  tem.opendiv();
         tem.proxyread();

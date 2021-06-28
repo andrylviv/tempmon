@@ -10,6 +10,9 @@ side were developed using Spring Boot, Spring Security, Spring Data, JPA/Hiberna
 
 3.Install MySQL and create "tem_mon_database" database. Make sure you have a 
 correct password in "application.properties"
+
+4.After you deploy the application and run the server you can go to "server_ip:port/tempmon" 
+in your browser, most probably it's going to be "localhost:8080/tempmon".
 ## [Hardware](https://github.com/andrylviv/avr-tempmonusb)
 The hardware consists of an ATMega8, DS18S20 temperature 
 sensor, HD44780 display  and some support elements.Communication with host 
