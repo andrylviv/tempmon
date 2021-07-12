@@ -16,14 +16,11 @@ public class TemperatureController {
 
     @GetMapping("/temp")
     public Temperatureconf greetingWithJavaconfig() throws Exception {
-       // tem.opendiv();
+
         tem.proxyread();
-     //   Temperatureconf t =new Temperatureconf();
-      //  double temperature = tem.getRes();
-      //  t.setTemperature(temperature);
+
         System.out.println("==== in temp ==== "+tem.getRes());
         return new Temperatureconf(tem.getRes());
-        //  return t;
     }
 
 }

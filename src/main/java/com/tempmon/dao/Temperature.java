@@ -5,8 +5,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.time.LocalDateTime;
-import java.time.ZonedDateTime;
-import java.util.Date;
 
 @Entity // This tells Hibernate to make a table out of this class
 public class Temperature {
@@ -18,24 +16,8 @@ public class Temperature {
 
     private Double temperature;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public LocalDateTime getDateTime() {
-        return date_time;
-    }
-
     public void setDateTime(LocalDateTime date_time) {
         this.date_time = date_time;
-    }
-
-    public Double getTemperature() {
-        return temperature;
     }
 
     public void setTemperature(Double temperature) {
